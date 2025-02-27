@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User List</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="./css/users.css">
 </head>
 <body>
-    <h1>HEllo world</h1>
+  <div id="main-container" class="relative h-screen w-full flex items-center justify-center">
+    <!-- Background Image -->
+    <div class="absolute inset-0 bg-[url('https://r4.wallpaperflare.com/wallpaper/156/945/149/landscape-mountains-sunlight-nature-wallpaper-d9ffb4b892f70e6509501a7e7fbba120.jpg')] bg-cover bg-center blur-[3px]"></div>
+
+    <div class="relative z-10 text-white text-center">
+      <h1 class="text-4xl font-bold mb-20 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.6)]" id="heading">Users</h1>
+      <div id="users" class="flex gap-6 mt-4"  ></div>
+    </div>
+  </div>
+
+  <script src="./js/users.js"></script>
+  
 </body>
 </html>
