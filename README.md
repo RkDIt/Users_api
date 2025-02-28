@@ -20,6 +20,6 @@ HTML
 
 CSS
 
-JavaScript (Vanilla or Framework like React, if applicable)
+JavaScript
 
 Fetch API for making HTTP requests
