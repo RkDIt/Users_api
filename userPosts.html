@@ -9,6 +9,7 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
       crossorigin="anonymous"
     ></script>
+    
   </head>
   <body class="flex flex-col md:flex-row min-h-screen">
     <!-- Left Sidebar (White Background) -->
@@ -75,7 +76,7 @@
           <input
             type="text"
             placeholder="What is happening?!"
-            class="w-full text-gray-800 text-lg focus:outline-none placeholder-gray-400"
+            class="w-full text-gray-800 text-lg focus:outline-none placeholder-gray-400 " id="inputCaption"
           />
           <!-- Icons Row -->
           <div class="flex items-center space-x-4 text-gray-500 text-lg mt-3">
@@ -86,7 +87,7 @@
         </div>
         <!-- Post Button -->
         <button
-          class="bg-blue-500 text-white px-4 py-2 rounded-full font-semibold shadow-md hover:bg-blue-600 transition"
+          class="bg-blue-500 text-white px-4 py-2 rounded-full font-semibold shadow-md hover:bg-blue-600 transition" onclick = "newPost()"
         >
           Post
         </button>

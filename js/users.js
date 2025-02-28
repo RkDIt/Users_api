@@ -35,7 +35,7 @@ function logAva() {
   usersContainer.innerHTML = "";
   usersContainer.classList.add("grid", "grid-cols-5", "gap-20");
 
-  userLogin.forEach((user) => {
+  userLogin.forEach((user, index) => {
     const userDiv = document.createElement("div");
     userDiv.classList.add(
       "flex",
@@ -47,8 +47,17 @@ function logAva() {
       "transition-all",
       "duration-300",
       "hover:scale-110",
-      "hover:cursor-pointer"
+      "hover:cursor-pointer",
+      "opacity-0", // Start hidden
+      "translate-y-10" // Start lower
     );
+
+    // Add a base delay to ensure even the first item animates smoothly
+    const baseDelay = 200; // Adjust this to control when the first item starts animating
+    setTimeout(() => {
+      userDiv.classList.add("opacity-100", "translate-y-0"); // Animate in
+      userDiv.classList.remove("opacity-0", "translate-y-10");
+    }, baseDelay + index * 100); // Apply delay
 
     const img = document.createElement("img");
     img.src = user.avatar;
@@ -63,9 +72,7 @@ function logAva() {
       "hover:shadow-black/50"
     );
 
-    // Attach event listener
     img.addEventListener("click", open);
-    
 
     const name = document.createElement("h1");
     name.textContent = user.name;
@@ -80,7 +87,7 @@ function logAva() {
     userDiv.appendChild(name);
     usersContainer.appendChild(userDiv);
 
-    name.addEventListener("click",open)
+    name.addEventListener("click", open);
   });
 }
 
